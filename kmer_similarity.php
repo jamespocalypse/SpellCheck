@@ -15,13 +15,13 @@
 class kmer_similarity 
 {
     var $alphabet = "abcdefghijklmnopqrstuvwxyz123456789.() ";
-    var $size = 3;
+    var $size = 2;
     var $counts = array();
     var $num_combinations = 0;
     
     function __construct() 
     {
-        $this->num_combinations();
+        $this->calcArraySize();
         $this->initCounts();
     }
     function getWord($pos)
